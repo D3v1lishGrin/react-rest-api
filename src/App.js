@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import "./GetList/GetList"
-import LoginForm from "./LoginForm"
-import GetList from "./GetList/GetList";
-import GetLocalList from './GetList/GetLocalList';
-import PostValues from "./PostValues/PostValues";
-
+import './App.css';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import UserList from './GetList/UserList';
+import UserEdit from './GetList/UserEdit';
 
 class App extends Component {
-
-
     render() {
-        return(
-            //<GetLocalList />
-            //  <PostValues />
-            <LoginForm />
+        return (
+            <Router>
+                <Switch>
+                    <Route path='/' exact={true} component={Home}/>
+                    <Route path='/users' exact={true} component={UserList}/>
+                    <Route path='/users/:id' exact={true} component={UserEdit}/>
+                </Switch>
+            </Router>
         )
-      }
+    }
 }
 
-  export default App;
-
+export default App;
