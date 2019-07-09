@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import users from './data';
 
+/**
+ * Shows Data From Local JSON File
+ */
 
 class GetLocalList extends Component{
 

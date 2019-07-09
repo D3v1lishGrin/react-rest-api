@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 /**
- * <button
- *      onClick={() => props.sortBy('nameOfProperty')
+ * Local API call is functional but I haven't been able to represent the data in a table
+ *
  */
-
 class GetList extends Component {
 
     state={
